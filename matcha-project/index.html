@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>專業抹茶品鑑知識庫</title>
+    <style>
+        /* 共用變數與基礎設定 */
+        :root {
+            --matcha-green: #5c6c39;
+            --matcha-light: #e8ede0;
+            --bg-color: #fdfbf7;
+            --text-main: #333333;
+            --text-muted: #666666;
+            --border-color: #dcd7cb;
+        }
+
+        body {
+            font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.8;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            color: var(--matcha-green);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        p.subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* 抹茶清單網格 */
+        .matcha-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        /* 個別抹茶卡片 */
+        .matcha-card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 25px;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .matcha-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            border-color: var(--matcha-green);
+        }
+
+        .card-brand {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 5px;
+        }
+
+        .card-title {
+            color: var(--matcha-green);
+            font-size: 1.5rem;
+            margin: 0 0 15px 0;
+            border-bottom: 2px solid var(--matcha-light);
+            padding-bottom: 10px;
+        }
+
+        .card-tags {
+            display: flex;
+            gap: 8px;
+            margin-top: auto;
+            flex-wrap: wrap;
+        }
+
+        .card-tag {
+            background: var(--matcha-light);
+            color: var(--matcha-green);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>專業抹茶品鑑知識庫</h1>
+            <p class="subtitle">Matcha Selection & Tasting Expert</p>
+        </header>
+
+        <div class="matcha-grid">
+            <!-- 連結到你剛剛建立的五十鈴頁面 -->
+            <a href="matcha_profiles/marukyu-isuzu.html" class="matcha-card">
+                <span class="card-brand">丸久小山園 (京都 宇治)</span>
+                <h2 class="card-title">五十鈴 (Isuzu)</h2>
+                <div class="card-tags">
+                    <span class="card-tag">旨味 3</span>
+                    <span class="card-tag">苦澀 2</span>
+                    <span class="card-tag">薄茶純飲</span>
+                </div>
+            </a>
+
+            <!-- 未來若有新增其他茶款，可以繼續在這裡複製卡片 -->
+            <!-- 
+            <a href="matcha_profiles/marukyu-wakatake.html" class="matcha-card">
+                <span class="card-brand">丸久小山園 (京都 宇治)</span>
+                <h2 class="card-title">若竹 (Wakatake)</h2>
+                <div class="card-tags">
+                    <span class="card-tag">料理級</span>
+                    <span class="card-tag">適合烘焙</span>
+                </div>
+            </a> 
+            -->
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>丸久小山園 五十鈴 - 專業抹茶品鑑知識庫</title>
+    <style>
+        /* 日系極簡與抹茶主題 CSS */
+        :root {
+            --matcha-green: #5c6c39;
+            --matcha-light: #e8ede0;
+            --bg-color: #fdfbf7;
+            --text-main: #333333;
+            --text-muted: #666666;
+            --border-color: #dcd7cb;
+        }
+
+        body {
+            font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 760px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+            border: 1px solid var(--border-color);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--matcha-green);
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+        
+        nav a:hover { opacity: 0.7; }
+
+        .profile-header {
+            text-align: center;
+            border-bottom: 2px solid var(--matcha-light);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .brand {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .product-name {
+            font-size: 2.2rem;
+            color: var(--matcha-green);
+            margin: 0 0 15px 0;
+        }
+
+        /* 屬性網格 (對應企劃書的資料庫欄位) */
+        .meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            background-color: var(--matcha-light);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .meta-item {
+            font-size: 0.9rem;
+        }
+
+        .meta-item strong {
+            display: block;
+            color: var(--matcha-green);
+            font-size: 0.85rem;
+            margin-bottom: 3px;
+        }
+
+        section { margin-bottom: 35px; }
+        
+        h2 {
+            font-size: 1.3rem;
+            color: var(--matcha-green);
+            border-left: 4px solid var(--matcha-green);
+            padding-left: 12px;
+            margin-bottom: 20px;
+        }
+
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            background: #f0f0f0;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--text-main);
+            border: 1px solid #e0e0e0;
+        }
+
+        .tag.score { background: white; border-color: var(--matcha-green); color: var(--matcha-green); font-weight: bold; }
+        .tag.good { background: #e8f5e9; border-color: #a5d6a7; color: #2e7d32; }
+        .tag.bad { background: #ffebee; border-color: #ef9a9a; color: #c62828; }
+
+        .description {
+            background: #fafafa;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed var(--border-color);
+        }
+
+        .brewing-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .brewing-list li {
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .brewing-list li:last-child { border-bottom: none; }
+
+        footer {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="../index.html" class="back-link">← 返回抹茶目錄</a>
+        </nav>
+
+        <article class="matcha-profile">
+            <header class="profile-header">
+                <p class="brand">丸久小山園 (Marukyu Koyamaen)</p>
+                <h1 class="product-name">五十鈴 (Isuzu)</h1>
+            </header>
+
+            <!-- 核心資料庫欄位區 (依照專題企劃書 Table 4 設計) -->
+            <div class="meta-grid">
+                <div class="meta-item"><strong>產地 (Origin)</strong>京都 宇治</div>
+                <div class="meta-item"><strong>等級 (Grade)</strong>高級茶道級</div>
+                <div class="meta-item"><strong>採摘期 (Harvest)</strong>一番茶</div>
+                <div class="meta-item"><strong>遮蔭天數 (Shade Days)</strong>約 20 天</div>
+                <div class="meta-item"><strong>每30g價位 (Price)</strong>約 NT$ 450</div>
+                <div class="meta-item"><strong>香氣 (Aroma)</strong>清甜、海苔香</div>
+            </div>
+
+            <div class="profile-content">
+                <section class="flavor-section">
+                    <h2>風味評分模型 (1-5分)</h2>
+                    <div class="tags-container">
+                        <span class="tag score">旨味 (Umami)：★★★☆☆ (3)</span>
+                        <span class="tag score">苦澀感 (Astringency)：★★☆☆☆ (2)</span>
+                    </div>
+                    <p class="description">
+                        五十鈴在丸久小山園的茶道級薄茶中屬於高性價比的進階選擇。它具備明顯的海苔般天然甘甜（旨味），同時保有清爽微弱的茶澀感。適合有一定品飲經驗、追求回甘與平衡溫潤口感的進階使用者。
+                    </p>
+                </section>
+
+                <section class="context-section">
+                    <h2>系統推薦用途 (Context)</h2>
+                    <div class="tags-container">
+                        <!-- 對應 best_for 與 not_recommended_for -->
+                        <span class="tag good">✓ 傳統薄茶純飲</span>
+                        <span class="tag good">✓ 鮮奶拿鐵</span>
+                        <span class="tag good">✓ 冰磚茶磚與冷萃特調</span>
+                        <span class="tag bad">✗ 烘焙與甜點製作 (成本過高且香氣易流失)</span>
+                    </div>
+                </section>
+
+                <section class="brewing-section">
+                    <h2>標準沖泡指南 (Planning & 比例)</h2>
+                    <ul class="brewing-list">
+                        <li><strong>🍵 粉量：</strong> 2g (約兩茶杓)</li>
+                        <li><strong>💧 水溫與水量：</strong> 80°C / 70ml</li>
+                        <li><strong>🛠️ 建議茶具：</strong> 100本立茶筅、標準抹茶碗</li>
+                        <li><strong>✨ 刷法提示：</strong> 
+                            加入熱水後，使用茶筅在碗底以 <strong>「W」或「M」字型</strong> 快速前後刷動起泡，待表面佈滿細緻泡沫後，將茶筅輕提至表面整理大氣泡，最後以 <strong>「の」字型</strong> 輕輕畫圓收尾，垂直提起。
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </article>
+
+        <footer>
+            <p>© 2026 專業抹茶選購與品鑑 AI Agent 知識庫</p>
+        </footer>
+    </div>
+</body>
+</html>
