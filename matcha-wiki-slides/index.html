@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>日本抹茶品鑑知識庫 | LLM Wiki</title>
+  <style>
+    :root {
+      --bg: #f6f7f2;
+      --surface: #ffffff;
+      --primary: #3b5e2b;
+      --primary-light: #e8efe3;
+      --accent: #7a9a5b;
+      --text: #242923;
+      --muted: #5c665a;
+      --border: #dce3d5;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    header {
+      background: linear-gradient(135deg, #2d4a20 0%, #4b7338 100%);
+      color: #fff;
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+    header h1 { font-size: 2rem; margin-bottom: 0.5rem; letter-spacing: 0.04em; }
+    header p { opacity: 0.9; max-width: 680px; margin: 0 auto 1.5rem; }
+    .cta-btn {
+      display: inline-block;
+      background: #fff;
+      color: var(--primary);
+      font-weight: 700;
+      padding: 0.7rem 1.5rem;
+      border-radius: 999px;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: transform 0.2s;
+    }
+    .cta-btn:hover { transform: translateY(-2px); }
+    main { max-width: 1000px; margin: 2rem auto; padding: 0 1.25rem; }
+    .meta-bar {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: space-between;
+      font-size: 0.95rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 2.5rem;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: box-shadow 0.2s;
+    }
+    .card:hover { box-shadow: 0 6px 18px rgba(59, 94, 43, 0.08); }
+    .tag {
+      display: inline-block;
+      background: var(--primary-light);
+      color: var(--primary);
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.2rem 0.65rem;
+      border-radius: 6px;
+      margin-bottom: 0.6rem;
+    }
+    .card h2 { font-size: 1.15rem; margin-bottom: 0.5rem; color: var(--primary); }
+    .card p { font-size: 0.92rem; color: var(--muted); margin-bottom: 1rem; }
+    .card a {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .audit-box {
+      background: var(--surface);
+      border-left: 5px solid var(--primary);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+    .audit-box h3 { color: var(--primary); margin-bottom: 0.75rem; }
+    .audit-box ul { padding-left: 1.25rem; font-size: 0.95rem; }
+    .audit-box li { margin-bottom: 0.5rem; }
+    footer { text-align: center; color: var(--muted); font-size: 0.85rem; padding: 2rem 1rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🍵 日本抹茶品鑑知識庫（LLM Wiki）</h1>
+    <p>基於 AGENTS.md 結構化規範建立，整合丸久小山園茶款等級光譜、製程原理與手刷沖泡標準。</p>
+    <a class="cta-btn" href="./presentation.html">▶ 開啟教學 HTML 簡報（零基礎入門）</a>
+  </header>
+
+  <main>
+    <div class="meta-bar">
+      <div><strong>知識庫條目數：</strong>6 篇核心結構化文件（已超過 5 篇 Ingest 門檻）</div>
+      <div><strong>協作規範：</strong>AGENTS.md（先討論、後生成 + 一致性驗證）</div>
+    </div>
+
+    <div class="grid">
+      <article class="card">
+        <span class="tag">Wiki-01 · 基礎知識</span>
+        <h2>什麼是抹茶？製程與風味原理</h2>
+        <p>解析覆下栽培、碾茶蒸青、石臼研磨三大工藝，並建立抹茶與一般綠茶粉的結構化對照表。</p>
+        <a href="./wiki/01-matcha-basics.md">檢視 Markdown 原始檔 →</a>
+      </article>
+
+      <article class="card">
+        <span class="tag">Wiki-02 · 等級體系</span>
+        <h2>抹茶等級分類與雙軸光譜</h2>
+        <p>釐清濃茶（Koicha）、薄茶（Usucha）與食品加工用界線，整合丸久小山園雙軸等級光譜。</p>
+        <a href="./wiki/02-matcha-grades.md">檢視 Markdown 原始檔 →</a>
+      </article>
+
+      <article class="card">
+        <span class="tag">Wiki-03 · 茶款圖鑑（上）</span>
+        <h2>丸久小山園：高階濃茶與全能款</h2>
+        <p>收錄天授、長安、永壽、雲鶴、金輪之風味特徵與濃／薄茶雙棲應用參數。</p>
+        <a href="./wiki/03-marukyu-koicha.md">檢視 Markdown 原始檔 →</a>
+      </article>
+
+      <article class="card">
+        <span class="tag">Wiki-04 · 茶款圖鑑（下）</span>
+        <h2>丸久小山園：日常薄茶與入門首選</h2>
+        <p>比較和光、又玄、千木之白、五十鈴、青嵐，提供零基礎純飲與拿鐵跨界選茶建議。</p>
+        <a href="./wiki/04-marukyu-usucha.md">檢視 Markdown 原始檔 →</a>
+      </article>
+
+      <article class="card">
+        <span class="tag">Wiki-05 · 食品烘焙篇</span>
+        <h2>拿鐵、低溫與高溫烘焙選茶指南</h2>
+        <p>涵蓋若竹、綠樹、白蓮、龍膽、水仙、菖蒲、東和，以及防潮裝飾專用的「不哭抹茶」。</p>
+        <a href="./wiki/05-marukyu-culinary.md">檢視 Markdown 原始檔 →</a>
+      </article>
+
+      <article class="card">
+        <span class="tag">Wiki-06 · 實作教學</span>
+        <h2>手刷抹茶標準器具與沖泡參數</h2>
+        <p>比較竹製 100 本立與樹脂茶筅差異，整理 80°C 水溫、W/M 字擊拂與「の」字收尾口訣。</p>
+        <a href="./wiki/06-brewing-guide.md">檢視 Markdown 原始檔 →</a>
+      </article>
+    </div>
+
+    <section class="audit-box">
+      <h3>🔍 資料 Ingest 與跨來源一致性檢查紀錄</h3>
+      <ul>
+        <li><strong>檢查項目 #1（五十鈴與青嵐的分類跨界）：</strong>比對 Madeleine 雙軸圖表與丸久小山園官方說明後，發現前者將其列於「食品用抹茶（薄茶）」頂端，後者歸為「茶道點茶／練習用」。Wiki 中已明確標註兩者為「茶道入門薄茶與高階飲用／低溫烘焙」的跨界茶款。</li>
+        <li><strong>檢查項目 #2（金輪與永壽的雙重用途）：</strong>簡化等級圖僅將金輪、永壽列於濃茶區間，經比對詳細品鑑文獻後，於 Wiki-03 補充其「薄茶與濃茶全方位適用」的特性，並標註金輪 80°C 沖泡建議。</li>
+        <li><strong>檢查項目 #3（防潮裝飾茶款補遺）：</strong>整合文字來源獨有的「不哭抹茶（泣かない抹茶，特選／德用）」不吸濕特性，補齊烘焙裝飾維度。</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    東海大學 資訊工程學系 · LLM Wiki 知識庫與教學簡報實作專案
+  </footer>
+</body>
+</html>
