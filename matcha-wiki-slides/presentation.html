@@ -60,7 +60,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 1.5rem;
+      padding: 1.25rem;
       overflow-y: auto;
     }
     .slide {
@@ -69,9 +69,9 @@
       border: 1px solid var(--border);
       border-radius: 18px;
       width: 100%;
-      max-width: 960px;
-      min-height: 520px;
-      padding: 2.5rem 3rem;
+      max-width: 1040px;
+      min-height: 550px;
+      padding: 2rem 2.75rem;
       box-shadow: 0 12px 32px rgba(47, 82, 34, 0.08);
       flex-direction: column;
       justify-content: space-between;
@@ -91,49 +91,97 @@
       font-size: 0.82rem;
       padding: 0.25rem 0.75rem;
       border-radius: 999px;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.65rem;
     }
-    h1 { font-size: 2.2rem; color: var(--primary); line-height: 1.3; margin-bottom: 1rem; }
-    h2 { font-size: 1.65rem; color: var(--primary); margin-bottom: 1rem; }
-    p.lead { font-size: 1.1rem; color: var(--muted); line-height: 1.7; margin-bottom: 1.25rem; }
+    h1 { font-size: 2.15rem; color: var(--primary); line-height: 1.3; margin-bottom: 0.9rem; }
+    h2 { font-size: 1.55rem; color: var(--primary); margin-bottom: 0.65rem; }
+    p.lead { font-size: 1.02rem; color: var(--muted); line-height: 1.65; margin-bottom: 1rem; }
 
     /* 卡片與表格排版 */
-    .cols-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin: 0.75rem 0; }
-    .cols-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 0.75rem 0; }
+    .cols-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin: 0.5rem 0; }
+    .cols-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 0.5rem 0; }
     .box {
       background: #f9fbf7;
       border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 1.15rem;
+      padding: 1.1rem;
     }
-    .box h3 { color: var(--primary); font-size: 1.05rem; margin-bottom: 0.45rem; }
-    .box p, .box li { font-size: 0.93rem; color: var(--text); line-height: 1.6; }
+    .box h3 { color: var(--primary); font-size: 1.02rem; margin-bottom: 0.45rem; }
+    .box p, .box li { font-size: 0.91rem; color: var(--text); line-height: 1.58; }
     .box ul { padding-left: 1.2rem; }
 
     table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 0.92rem;
-      margin-top: 0.5rem;
+      font-size: 0.91rem;
+      margin-top: 0.4rem;
     }
     th, td {
       border: 1px solid var(--border);
-      padding: 0.65rem 0.85rem;
+      padding: 0.6rem 0.8rem;
       text-align: left;
     }
     th { background: var(--primary-soft); color: var(--primary); }
 
+    /* 茶罐與茶包圖片網格（第 4 頁） */
+    .gallery-tabs {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 0.65rem;
+    }
+    .tab-btn {
+      background: #fff;
+      border: 1.5px solid var(--primary-mid);
+      color: var(--primary);
+      padding: 0.35rem 0.9rem;
+      border-radius: 8px;
+      font-size: 0.86rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .tab-btn.active {
+      background: var(--primary);
+      color: #fff;
+    }
+    .can-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.6rem;
+    }
+    .pack-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.65rem;
+    }
+    .can-item {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.45rem;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .can-item:hover { transform: translateY(-2px); border-color: var(--primary-mid); }
+    .can-item img {
+      width: 100%;
+      height: 76px;
+      object-fit: contain;
+      margin-bottom: 0.25rem;
+    }
+    .can-name { font-weight: 700; font-size: 0.84rem; color: var(--primary); }
+    .can-type { font-size: 0.72rem; color: var(--muted); }
+
     /* 互動選茶器與測驗 */
-    .btn-group { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 1rem; }
+    .btn-group { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-bottom: 0.9rem; }
     .choice-btn {
       background: #fff;
       border: 1.5px solid var(--primary-mid);
       color: var(--primary);
-      padding: 0.5rem 1rem;
+      padding: 0.48rem 0.95rem;
       border-radius: 8px;
       cursor: pointer;
       font-weight: 600;
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       transition: all 0.2s;
     }
     .choice-btn:hover, .choice-btn.selected {
@@ -145,14 +193,31 @@
       border-left: 4px solid var(--primary);
       padding: 1rem 1.25rem;
       border-radius: 8px;
-      font-size: 0.96rem;
-      line-height: 1.65;
+      font-size: 0.94rem;
+      line-height: 1.62;
+      display: flex;
+      gap: 1.25rem;
+      align-items: center;
+    }
+    .result-imgs {
+      display: flex;
+      gap: 0.55rem;
+      flex-shrink: 0;
+    }
+    .result-imgs img {
+      width: 84px;
+      height: 84px;
+      object-fit: contain;
+      background: #fff;
+      border-radius: 8px;
+      padding: 0.25rem;
+      border: 1px solid var(--border);
     }
 
     /* 底部出處標註與控制列 */
     .source-footer {
-      margin-top: 1.5rem;
-      padding-top: 0.75rem;
+      margin-top: 1.15rem;
+      padding-top: 0.65rem;
       border-top: 1px dashed var(--border);
       font-size: 0.82rem;
       color: var(--muted);
@@ -165,7 +230,7 @@
     .controls {
       background: #fff;
       border-top: 1px solid var(--border);
-      padding: 0.75rem 1.5rem;
+      padding: 0.65rem 1.5rem;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -175,9 +240,9 @@
       background: var(--primary);
       color: #fff;
       border: none;
-      padding: 0.55rem 1.35rem;
+      padding: 0.5rem 1.3rem;
       border-radius: 8px;
-      font-size: 0.95rem;
+      font-size: 0.93rem;
       font-weight: 600;
       cursor: pointer;
     }
@@ -186,8 +251,10 @@
 
     @media (max-width: 768px) {
       .cols-2, .cols-3 { grid-template-columns: 1fr; }
-      .slide { padding: 1.5rem; min-height: auto; }
-      h1 { font-size: 1.6rem; }
+      .can-grid, .pack-grid { grid-template-columns: repeat(2, 1fr); }
+      .result-panel { flex-direction: column; align-items: flex-start; }
+      .slide { padding: 1.4rem; min-height: auto; }
+      h1 { font-size: 1.55rem; }
     }
   </style>
 </head>
@@ -305,32 +372,111 @@
       </div>
     </section>
 
-    <!-- Slide 4: 丸久小山園雙軸光譜 -->
+    <!-- Slide 4: 丸久小山園雙軸光譜 + 17款全系列實拍圖鑑 -->
     <section class="slide">
       <div>
-        <span class="slide-tag">單元三 · 經典品牌實例（丸久小山園）</span>
-        <h2>丸久小山園雙軸等級光譜與跨界茶款</h2>
-        <p class="lead">以京都宇治名店「丸久小山園」為例，茶款可分為「茶道用」與「食品加工用」兩大軸線，其中<strong>五十鈴</strong>與<strong>青嵐</strong>是重要的跨界樞紐：</p>
-        <div class="cols-2">
-          <div class="box">
-            <h3>🍵 茶道用軸線（由高至低）</h3>
-            <ul>
-              <li><strong>濃茶系列</strong>：天授（旗艦）＞ 長安 ＞ 永壽 ＞ 雲鶴 ＞ 金輪（80°C 全能款）</li>
-              <li><strong>薄茶系列</strong>：和光（新手純飲首選）＞ 又玄（正式茶道入門）＞ 千木之白 ＞ <strong>五十鈴</strong> ＞ <strong>青嵐</strong></li>
-            </ul>
+        <span class="slide-tag">單元三 · 經典品牌實例（丸久小山園全系列圖鑑）</span>
+        <h2>丸久小山園雙軸等級光譜（點擊切換茶道罐裝／食品烘焙袋裝）</h2>
+        <div class="gallery-tabs">
+          <button class="tab-btn active" id="tabCan" onclick="switchGallery('can')">🍵 茶道用軸線（濃茶／薄茶 10 款罐裝）</button>
+          <button class="tab-btn" id="tabPack" onclick="switchGallery('pack')">🍰 食品加工軸線（拿鐵／烘焙 7 款袋裝）</button>
+        </div>
+
+        <!-- 茶道罐裝 10 款 -->
+        <div class="can-grid" id="galleryCan">
+          <div class="can-item">
+            <img src="./images/tenju.jpg" alt="天授" />
+            <div class="can-name">1. 天授 Tenju</div>
+            <div class="can-type">濃茶 · 旗艦最高級</div>
           </div>
-          <div class="box">
-            <h3>🍰 食品與烘焙軸線（由高至低）</h3>
-            <ul>
-              <li><strong>高階飲用／低溫甜點跨界</strong>：<strong>五十鈴</strong>（海苔鮮甜、色澤最美）＞ <strong>青嵐</strong>（高 CP 值練習／拿鐵兩用）</li>
-              <li><strong>專業烘焙系列</strong>：若竹（烘焙界公認首選，加熱不褪色）＞ 綠樹 ＞ 白蓮（拿鐵特化）＞ 龍膽 ＞ 水仙 ＞ 菖蒲（重油糖高溫）＞ 東和</li>
-              <li><strong>特殊裝飾</strong>：不哭抹茶（具不吸濕性，可直接灑粉防潮）</li>
-            </ul>
+          <div class="can-item">
+            <img src="./images/choan.jpg" alt="長安" />
+            <div class="can-name">2. 極長安 Choan</div>
+            <div class="can-type">濃茶 · 高雅深邃</div>
+          </div>
+          <div class="can-item">
+            <img src="./images/eiju.jpg" alt="永壽" />
+            <div class="can-name">3. 永壽 Eiju</div>
+            <div class="can-type">濃／薄茶全能款</div>
+          </div>
+          <div class="can-item">
+            <img src="./images/unkaku.jpg" alt="雲鶴" />
+            <div class="can-name">4. 雲鶴 Unkaku</div>
+            <div class="can-type">濃茶 · 代表性名茶</div>
+          </div>
+          <div class="can-item">
+            <img src="./images/kinrin.jpg" alt="金輪" />
+            <div class="can-name">5. 金輪 Kinrin</div>
+            <div class="can-type">80°C 濃／薄雙棲</div>
+          </div>
+          <div class="can-item">
+            <img src="./images/wako.jpg" alt="和光" />
+            <div class="can-name">6. 和光 Wako</div>
+            <div class="can-type">薄茶 · 新手純飲首選</div>
+          </div>
+          <div class="can-item">
+            <img src="./images/yugen.jpg" alt="又玄" />
+            <div class="can-name">7. 又玄 Yugen</div>
+            <div class="can-type">薄茶 · 茶道入門款</div>
+          </div>
+          <div class="can-item">
+            <img src="./images/chiginoshio.jpg" alt="千木之白" />
+            <div class="can-name">8. 千木之白</div>
+            <div class="can-type">薄茶 · 柔和易入口</div>
+          </div>
+          <div class="can-item">
+            <img src="./images/isuzu.jpg" alt="五十鈴" />
+            <div class="can-name">9. 五十鈴 Isuzu</div>
+            <div class="can-type">薄茶／拿鐵跨界</div>
+          </div>
+          <div class="can-item">
+            <img src="./images/aoarashi.jpg" alt="青嵐" />
+            <div class="can-name">10. 青嵐 Aoarashi</div>
+            <div class="can-type">練習／烘焙兩用</div>
+          </div>
+        </div>
+
+        <!-- 食品烘焙袋裝 7 款 -->
+        <div class="pack-grid" id="galleryPack" style="display:none;">
+          <div class="can-item">
+            <img src="./images/wakatake.jpg" alt="若竹" />
+            <div class="can-name">1. 若竹 Wakatake</div>
+            <div class="can-type">烘焙首選 · 加熱不褪色</div>
+          </div>
+          <div class="can-item">
+            <img src="./images/midorigi.jpg" alt="綠樹" />
+            <div class="can-name">2. 綠樹 Midorigi</div>
+            <div class="can-type">入門至中階經濟烘焙</div>
+          </div>
+          <div class="can-item">
+            <img src="./images/byakuren.jpg" alt="白蓮" />
+            <div class="can-name">3. 白蓮 Byakuren</div>
+            <div class="can-type">拿鐵與乳製品特化款</div>
+          </div>
+          <div class="can-item">
+            <img src="./images/rindo.jpg" alt="龍膽" />
+            <div class="can-name">4. 龍膽 Rindou</div>
+            <div class="can-type">高溫重烘焙／重茶感拿鐵</div>
+          </div>
+          <div class="can-item">
+            <img src="./images/suisen.jpg" alt="水仙" />
+            <div class="can-name">5. 水仙 Suisen</div>
+            <div class="can-type">標準食品加工用</div>
+          </div>
+          <div class="can-item">
+            <img src="./images/ayame.jpg" alt="菖蒲" />
+            <div class="can-name">6. 菖蒲 Ayame</div>
+            <div class="can-type">高糖高油高溫烘焙</div>
+          </div>
+          <div class="can-item">
+            <img src="./images/towa.jpg" alt="東和" />
+            <div class="can-name">7. 東和 Towa</div>
+            <div class="can-type">基礎烘焙 · 性價比最高</div>
           </div>
         </div>
       </div>
       <div class="source-footer">
-        <span>對應知識庫條目：<a href="./wiki/03-marukyu-koicha.md" target="_blank">Wiki-03</a>、<a href="./wiki/04-marukyu-usucha.md" target="_blank">Wiki-04</a>、<a href="./wiki/05-marukyu-culinary.md" target="_blank">Wiki-05</a></span>
+        <span>對應知識庫條目：<a href="./wiki/03-marukyu-koicha.md" target="_blank">Wiki-03 濃茶</a>、<a href="./wiki/04-marukyu-usucha.md" target="_blank">Wiki-04 薄茶</a>、<a href="./wiki/05-marukyu-culinary.md" target="_blank">Wiki-05 食品烘焙篇</a></span>
         <span>第 4 / 7 頁</span>
       </div>
     </section>
@@ -339,7 +485,7 @@
     <section class="slide">
       <div>
         <span class="slide-tag">互動實驗室 · 情境選茶推薦器</span>
-        <h2>不知道買哪一罐？點選你的使用情境</h2>
+        <h2>不知道買哪一款？點選你的使用情境</h2>
         <p class="lead">點擊下方按鈕，系統將根據 LLM Wiki 中的茶款參數為你推薦最適合的丸久小山園茶款：</p>
         <div class="btn-group">
           <button class="choice-btn selected" onclick="selectTea('beginner', this)">🌱 第一次買，想直接手刷純飲</button>
@@ -348,9 +494,15 @@
           <button class="choice-btn" onclick="selectTea('master', this)">🏯 正式茶會招待或品飲濃茶</button>
         </div>
         <div class="result-panel" id="teaResult">
-          <strong>推薦首選：【和光（Wakō）】或【五十鈴（Isuzu）】</strong><br>
-          • <strong>和光</strong>：薄茶最高階，苦澀味極低、帶有清幽花香與圓潤甘甜，是零基礎純飲最不容易踩雷的入門首選。<br>
-          • <strong>五十鈴</strong>：傳統石臼研磨，海苔香氣與甜感鮮明，純飲或偶爾加牛奶做高階拿鐵都很出色。
+          <div class="result-imgs">
+            <img src="./images/wako.jpg" alt="和光" />
+            <img src="./images/isuzu.jpg" alt="五十鈴" />
+          </div>
+          <div>
+            <strong>推薦首選：【和光（Wakō）】或【五十鈴（Isuzu）】</strong><br>
+            • <strong>和光</strong>：薄茶最高階，苦澀味極低、帶有清幽花香與圓潤甘甜，是零基礎純飲最不容易踩雷的入門首選。<br>
+            • <strong>五十鈴</strong>：傳統石臼研磨，海苔香氣與甜感鮮明，純飲或偶爾加牛奶做高階拿鐵都很出色。
+          </div>
         </div>
       </div>
       <div class="source-footer">
@@ -443,15 +595,60 @@
       if (e.key === 'ArrowLeft') changeSlide(-1);
     });
 
+    function switchGallery(type) {
+      const isCan = type === 'can';
+      document.getElementById('galleryCan').style.display = isCan ? 'grid' : 'none';
+      document.getElementById('galleryPack').style.display = isCan ? 'none' : 'grid';
+      document.getElementById('tabCan').classList.toggle('active', isCan);
+      document.getElementById('tabPack').classList.toggle('active', !isCan);
+    }
+
     function selectTea(type, btn) {
       btn.parentElement.querySelectorAll('.choice-btn').forEach(b => b.classList.remove('selected'));
       btn.classList.add('selected');
       const box = document.getElementById('teaResult');
       const data = {
-        beginner: `<strong>推薦首選：【和光（Wakō）】或【五十鈴（Isuzu）】</strong><br>• <strong>和光</strong>：薄茶最高階，苦澀味極低、帶有清幽花香與圓潤甘甜，是零基礎純飲最不容易踩雷的入門首選。<br>• <strong>五十鈴</strong>：傳統石臼研磨，海苔香氣與甜感鮮明，純飲或偶爾加牛奶做高階拿鐵都很出色。`,
-        latte: `<strong>推薦首選：【青嵐（Aoarashi）】或【白蓮（Byakuren）】</strong><br>• <strong>青嵐</strong>：高 CP 值日常練習與拿鐵兩用茶，茶湯鮮綠、尾韻乾淨，加鮮奶後仍保有清新茶香。<br>• <strong>白蓮</strong>：專為乳製品與冷飲設計，粉末細緻，與牛奶混合時不會被奶香完全掩蓋。`,
-        baking: `<strong>推薦首選：【若竹（Wakatake）】或【菖蒲（Ayame）】</strong><br>• <strong>若竹</strong>：公認最適合烘焙的熱門款，甘甜與澀味平衡，最大優勢是<strong>高溫加熱後色澤依然鮮豔翠綠</strong>。<br>• <strong>菖蒲</strong>：苦澀度與茶味更重，適合搭配高糖、高油脂的磅蛋糕或舒芙蕾鬆餅。`,
-        master: `<strong>推薦首選：【雲鶴（Unkaku）】或【金輪（Kinrin）】</strong><br>• <strong>雲鶴</strong>：丸久小山園代表性濃茶，口感柔綿滑順、回甘深邃且澀感極低。<br>• <strong>金輪</strong>：兼具薄茶與初級濃茶的雙棲全能款，建議以 80°C 溫水沖泡，帶有奶油般圓潤旨味。`
+        beginner: `
+          <div class="result-imgs">
+            <img src="./images/wako.jpg" alt="和光" />
+            <img src="./images/isuzu.jpg" alt="五十鈴" />
+          </div>
+          <div>
+            <strong>推薦首選：【和光（Wakō）】或【五十鈴（Isuzu）】</strong><br>
+            • <strong>和光</strong>：薄茶最高階，苦澀味極低、帶有清幽花香與圓潤甘甜，是零基礎純飲最不容易踩雷的入門首選。<br>
+            • <strong>五十鈴</strong>：傳統石臼研磨，海苔香氣與甜感鮮明，純飲或偶爾加牛奶做高階拿鐵都很出色。
+          </div>`,
+        latte: `
+          <div class="result-imgs">
+            <img src="./images/aoarashi.jpg" alt="青嵐" />
+            <img src="./images/byakuren.jpg" alt="白蓮" />
+          </div>
+          <div>
+            <strong>推薦首選：【青嵐（Aoarashi）】或【白蓮（Byakuren）】</strong><br>
+            • <strong>青嵐</strong>：高 CP 值日常練習與拿鐵兩用茶，茶湯鮮綠、尾韻乾淨，加鮮奶後仍保有清新茶香。<br>
+            • <strong>白蓮</strong>：專為乳製品與冷飲設計（食品加工線），粉末細緻，與牛奶混合時不會被奶香完全掩蓋。
+          </div>`,
+        baking: `
+          <div class="result-imgs">
+            <img src="./images/wakatake.jpg" alt="若竹" />
+            <img src="./images/ayame.jpg" alt="菖蒲" />
+            <img src="./images/towa.jpg" alt="東和" />
+          </div>
+          <div>
+            <strong>推薦首選：【若竹（Wakatake）】、【菖蒲（Ayame）】或【東和（Towa）】</strong><br>
+            • <strong>若竹</strong>：公認最適合烘焙的熱門款，最大優勢是<strong>高溫加熱後色澤依然鮮豔翠綠</strong>。<br>
+            • <strong>菖蒲／東和</strong>：菖蒲茶味濃重適合高糖高油甜點；東和性價比最高，適合大量基礎烘焙。
+          </div>`,
+        master: `
+          <div class="result-imgs">
+            <img src="./images/unkaku.jpg" alt="雲鶴" />
+            <img src="./images/kinrin.jpg" alt="金輪" />
+          </div>
+          <div>
+            <strong>推薦首選：【雲鶴（Unkaku）】或【金輪（Kinrin）】</strong><br>
+            • <strong>雲鶴</strong>：丸久小山園代表性濃茶，口感柔綿滑順、回甘深邃且澀感極低。<br>
+            • <strong>金輪</strong>：兼具薄茶與初級濃茶的雙棲全能款，建議以 80°C 溫水沖泡，帶有奶油般圓潤旨味。
+          </div>`
       };
       box.innerHTML = data[type];
     }
